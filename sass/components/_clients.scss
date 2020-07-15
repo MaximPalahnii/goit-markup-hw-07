@@ -1,0 +1,27 @@
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clientlinc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  height: 90px;
+  width: 170px;
+  cursor: pointer;
+
+  transition: border-color 250ms var(--timing-funktion),
+    fill 250ms var(--timing-funktion);
+}
+
+.clientlinc:hover,
+.clientlinc:focus {
+  border-color: var(--active-color);
+  fill: var(--active-color);
+}
