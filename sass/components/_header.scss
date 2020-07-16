@@ -6,7 +6,7 @@ header {
   line-height: 16px;
   letter-spacing: 0.02em;
 
-  color: #212121;
+  color: $additional-text-color;
 }
 
 .portfolioheader {
@@ -29,7 +29,7 @@ header a {
 
 .logo {
   font-family: "Raleway", sans-serif;
-  color: var(--additional-text-color);
+  color: $additional-text-color;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.19;
@@ -38,12 +38,12 @@ header a {
 }
 
 .active {
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .nav-item .nav-linc.activenav {
   position: relative;
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .activenav::after {
@@ -56,7 +56,7 @@ header a {
   width: 100%;
   height: 4px;
 
-  background-color: var(--active-color);
+  background-color: $active-color;
 
   border-radius: 2px;
 }
@@ -66,7 +66,7 @@ header a {
 }
 
 .nav-item {
-  transition: color 250ms var(--timing-funktion);
+  transition: color $timing-funktion;
 }
 
 .nav-item:not(:last-child) {
@@ -82,15 +82,15 @@ header a {
 
 .nav-item .nav-linc {
   display: block;
-  color: var(--additional-text-color);
+  color: $additional-text-color;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms var(--timing-funktion);
+  transition: color $timing-funktion;
 }
 
 .nav-item .nav-linc:hover,
 .nav-item .nav-linc:focus {
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .nav-item .nav-linc::before {
@@ -100,14 +100,14 @@ header a {
   left: 0;
   bottom: 0;
 
-  background-color: var(--active-color);
+  background-color: $active-color;
 
   width: 100%;
   height: 4px;
 
   border-radius: 2px;
   transform: scaleX(0);
-  transition: transform 250ms var(--timing-funktion);
+  transition: transform $timing-funktion;
 }
 
 .nav-item .nav-linc:hover::before {
@@ -145,14 +145,13 @@ header a {
 .headericon {
   align-items: center;
 
-  color: var(--main-text-color);
-  fill: var(--main-text-color);
-  transition: color 250ms var(--timing-funktion),
-    fill 250ms var(--timing-funktion);
+  color: $main-text-color;
+  fill: $main-text-color;
+  transition: color $timing-funktion, fill $timing-funktion;
 }
 
 .headericon:hover,
 .headericon:focus {
-  fill: var(--active-color);
-  color: var(--active-color);
+  fill: $active-color;
+  color: $active-color;
 }

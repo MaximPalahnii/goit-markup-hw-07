@@ -1,6 +1,6 @@
 footer {
-  color: #ffffff;
-  background-color: var(--footer-background-color);
+  color: $white-color;
+  background-color: $footer-background-color;
 }
 
 footer .container {
@@ -26,7 +26,7 @@ footer a {
 }
 
 footer .logo {
-  color: #ffffff;
+  color: $white-color;
   font-size: 22px;
   margin-right: 0px;
   margin-bottom: 20px;
@@ -47,7 +47,7 @@ footer .logo {
 
 .address-item a:hover,
 .address-item a:focus {
-  color: var(--active-color);
+  color: $active-color;
 }
 
 footer .subscribe {
@@ -72,5 +72,5 @@ footer .social-item:not(:last-child) {
 
 .sendicon {
   margin-left: 10px;
-  fill: #ffffff;
+  fill: $white-color;
 }

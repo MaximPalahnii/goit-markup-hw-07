@@ -1,5 +1,5 @@
 .pbutton {
-  color: var(--additional-text-color);
+  color: $additional-text-color;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.87;
@@ -11,15 +11,14 @@
   min-height: 50px;
   border: 1px transparent;
   border-radius: 4px;
-  transition: color 250ms var(--timing-funktion),
-    background-color 250ms var(--timing-funktion),
-    box-shadow 250ms var(--timing-funktion);
+  transition: color $timing-funktion, background-color $timing-funktion,
+    box-shadow $timing-funktion;
 }
 
 .pbutton:hover,
 .pbutton:focus {
-  color: #ffffff;
-  background-color: var(--active-color);
+  color: $white-color;
+  background-color: $active-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 

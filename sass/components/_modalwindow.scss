@@ -8,7 +8,7 @@
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--timing-funktion);
+  transition: opacity $timing-funktion;
 }
 
 .modal {
@@ -26,13 +26,13 @@
   padding-bottom: 40px;
   padding-left: 40px;
 
-  background-color: #ffffff;
+  background-color: $white-color;
   border-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms var(--timing-funktion);
+  transition: transform $timing-funktion;
 }
 
 .backdrop.is-hidden {
@@ -51,7 +51,7 @@
   font-weight: 700;
   line-height: 1.15;
   font-size: 20px;
-  color: var(--additional-text-color);
+  color: $additional-text-color;
 }
 
 .modal-input {
@@ -71,7 +71,7 @@
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition: border-color 250ms var(--timing-funktion);
+  transition: border-color $timing-funktion;
 }
 
 .input-label {
@@ -82,8 +82,7 @@
 
   letter-spacing: 0.01em;
 
-  transition: transform 250ms var(--timing-funktion),
-    color 250ms var(--timing-funktion);
+  transition: transform $timing-funktion, color $timing-funktion;
 }
 
 .modal-icon {
@@ -92,12 +91,12 @@
   left: 16px;
   transform: translateY(-50%);
 
-  transition: fill 250ms var(--timing-funktion);
+  transition: fill $timing-funktion;
 }
 
 .modal-input:focus-within > .input-field {
   outline: none;
-  border-color: var(--active-color);
+  border-color: $active-color;
 }
 
 .modal-input:focus-within > .input-label,
@@ -105,11 +104,11 @@
   transform: translate(-25px, -35px);
   font-size: 12px;
   line-height: 1.17px;
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .modal-input:focus-within > .modal-icon {
-  fill: var(--active-color);
+  fill: $active-color;
 }
 
 .field-textarea {
@@ -123,8 +122,7 @@
   left: 42px;
 
   transform: translateY(-50%);
-  transition: transform 250ms var(--timing-funktion),
-    250ms var(--timing-funktion);
+  transition: transform $timing-funktion, $timing-funktion;
 
   line-height: 1.33;
   letter-spacing: 0.01em;
@@ -135,9 +133,9 @@
   top: 30%;
   left: 16px;
 
-  fill: var(--main-text-color);
+  fill: $main-text-color;
   transform: translateY(-50%);
-  transition: fill 250ms var(--timing-funktion);
+  transition: fill $timing-funktion;
 }
 
 .field-textarea .form-text {
@@ -146,8 +144,7 @@
   left: 16px;
 
   transform: translateY(-50%);
-  transition: transform 250ms var(--timing-funktion),
-    font-size 250ms var(--timing-funktion);
+  transition: transform $timing-funktion, font-size $timing-funktion;
 }
 
 .form-textarea {
@@ -157,7 +154,7 @@
 }
 
 .form-textarea:focus {
-  border-color: var(--active-color);
+  border-color: $active-color;
   outline: none;
 }
 
@@ -169,7 +166,7 @@
 .form-textarea:not(:placeholder-shown) .form-text,
 .form-textarea:focus ~ .form-text {
   transform: translate(0px, -40px);
-  color: var(--active-color);
+  color: $active-color;
   font-size: 12px;
 }
 
@@ -188,25 +185,25 @@
   display: flex;
   align-items: center;
 
-  background-color: #ffffff;
+  background-color: $white-color;
   fill: #000000;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
-  transition: fill 250ms var(--timing-funktion);
+  transition: fill $timing-funktion;
 }
 
 .modal-close:hover,
 .modal-close:focus {
-  background-color: #ffffff;
-  fill: var(--active-color);
+  background-color: $white-color;
+  fill: $active-color;
 }
 
 .terms,
 .terms:visited {
-  color: var(--active-color);
+  color: $active-color;
 }
 
 .checkbox-field {
@@ -232,13 +229,13 @@
   width: 15px;
   height: 15px;
 
-  border: 2px solid #212121;
+  border: 2px solid $additional-text-color;
   border-radius: 2px;
 }
 
 .checkbox:checked + .confirmation {
   border-color: transparent;
-  background-color: var(--active-color);
+  background-color: $active-color;
   background-image: url(../images/modal-galochka.svg);
   background-size: contain;
   background-origin: border-box;
@@ -254,8 +251,8 @@
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  background-color: var(--footer-background-color);
-  color: #afb1b8;
+  background-color: $footer-background-color;
+  color: $fill-color;
   font-size: 16px;
   line-height: 1.25;
 }
@@ -271,5 +268,5 @@
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;
+  color: $white-color;
 }

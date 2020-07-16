@@ -44,7 +44,7 @@
   display: block;
   width: 370px;
   margin: 15px;
-  transition: box-shadow 250ms var(--timing-funktion);
+  transition: box-shadow $timing-funktion;
 }
 
 .works-item:focus,
@@ -70,8 +70,8 @@
   height: 100%;
   opacity: 0;
 
-  transition: transform 250ms var(--timing-funktion);
-  transition: opacity 250ms var(--timing-funktion);
+  transition: transform $timing-funktion;
+  transition: opacity $timing-funktion;
 }
 
 .item-description {
@@ -84,7 +84,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
-  color: #ffffff;
+  color: $white-color;
 }
 
 .overlay-description {
@@ -92,8 +92,7 @@
 
   transform: translateY(100%);
   opacity: 0;
-  transition: transform 250ms var(--timing-funktion),
-    opacity 250ms var(--timing-funktion);
+  transition: transform $timing-funktion, opacity $timing-funktion;
 }
 
 .item-link:hover .overlay-description,
@@ -103,9 +102,9 @@
 }
 
 .item-link {
-  transition: transform 250ms var(--timing-funktion);
-  transition: opacity 250ms var(--timing-funktion);
-  transition: box-shadow 250ms var(--timing-funktion);
+  transition: transform $timing-funktion;
+  transition: opacity $timing-funktion;
+  transition: box-shadow $timing-funktion;
 }
 
 .item-link:hover,
@@ -127,7 +126,7 @@
   padding: 20px 24px;
 }
 .our-works .item-title {
-  color: var(--additional-text-color);
+  color: $additional-text-color;
   font-size: 18px;
   line-height: 2;
   font-weight: 700;
@@ -135,7 +134,7 @@
   margin-bottom: 4px;
 }
 .filter-type {
-  color: var(--main-text-color);
+  color: $main-text-color;
   font-size: 16px;
   line-height: 1.87;
   font-weight: 400;
@@ -143,7 +142,7 @@
 }
 
 .our-works {
-  color: #ffffff;
+  color: $white-color;
   font-size: 18px;
   line-height: 1.56;
   width: 100%;
