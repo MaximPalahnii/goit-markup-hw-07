@@ -148,19 +148,17 @@
 }
 
 .form-textarea {
+  resize: none;
+  padding: 12px 16px;
+
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   width: 100%;
-}
 
-.form-textarea:focus {
-  border-color: $active-color;
-  outline: none;
-}
-
-.form-textarea {
-  resize: none;
-  padding: 12px 16px;
+  &:focus {
+    border-color: $active-color;
+    outline: none;
+  }
 }
 
 .form-textarea:not(:placeholder-shown) .form-text,
@@ -193,12 +191,12 @@
   border-radius: 50%;
 
   transition: fill $timing-funktion;
-}
 
-.modal-close:hover,
-.modal-close:focus {
-  background-color: $white-color;
-  fill: $active-color;
+  &:hover,
+  &:focus {
+    background-color: $white-color;
+    fill: $active-color;
+  }
 }
 
 .terms,
@@ -261,12 +259,4 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
-}
-
-.footer-call {
-  display: block;
-  margin-bottom: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: $white-color;
 }

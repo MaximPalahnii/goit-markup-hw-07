@@ -1,3 +1,5 @@
+// Список клиентов
+
 .clients-list {
   display: flex;
   justify-content: space-between;
@@ -17,10 +19,10 @@
   cursor: pointer;
 
   transition: border-color $timing-funktion, fill $timing-funktion;
-}
 
-.clientlinc:hover,
-.clientlinc:focus {
-  border-color: $active-color;
-  fill: $active-color;
+  &:hover,
+  &:focus {
+    border-color: $active-color;
+    fill: $active-color;
+  }
 }

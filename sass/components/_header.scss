@@ -28,7 +28,7 @@ header a {
 }
 
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: $logo-text;
   color: $additional-text-color;
   font-size: 26px;
   font-weight: 700;
@@ -86,11 +86,11 @@ header a {
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color $timing-funktion;
-}
 
-.nav-item .nav-linc:hover,
-.nav-item .nav-linc:focus {
-  color: $active-color;
+  &:hover,
+  &:focus {
+    color: $active-color;
+  }
 }
 
 .nav-item .nav-linc::before {
@@ -148,10 +148,10 @@ header a {
   color: $main-text-color;
   fill: $main-text-color;
   transition: color $timing-funktion, fill $timing-funktion;
-}
 
-.headericon:hover,
-.headericon:focus {
-  fill: $active-color;
-  color: $active-color;
+  &:hover,
+  &:focus {
+    fill: $active-color;
+    color: $active-color;
+  }
 }
