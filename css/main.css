@@ -246,6 +246,7 @@ header a {
   margin-bottom: 30px;
 }
 
+/* modal window */
 .backdrop {
   position: fixed;
   top: 0;
@@ -271,7 +272,7 @@ header a {
   padding-right: 40px;
   padding-bottom: 40px;
   padding-left: 40px;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 4px;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -303,6 +304,12 @@ header a {
 }
 
 .modal-input {
+  position: relative;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.coment-input {
   position: relative;
   display: block;
   margin-bottom: 30px;
@@ -361,8 +368,47 @@ header a {
   fill: #2196f3;
 }
 
-.field-textarea {
-  position: relative;
+.input-textarea {
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-textfield {
+  position: absolute;
+  top: 10%;
+  left: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  letter-spacing: 0.01em;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.coment-input:focus-within > .input-textarea {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.coment-input:focus-within > .input-textfield,
+.input-textarea:not(:placeholder-shown) + .input-textfield {
+  -webkit-transform: translate(0px, -35px);
+          transform: translate(0px, -35px);
+  font-size: 12px;
+  line-height: 1.17px;
+  color: #2196f3;
+}
+
+.coment-input:focus-within > .modal-icon {
+  fill: #2196f3;
 }
 
 .form-text {
@@ -391,39 +437,6 @@ header a {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.field-textarea .form-text {
-  position: absolute;
-  top: 21px;
-  left: 16px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), font-size 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-textarea {
-  resize: none;
-  padding: 12px 16px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  width: 100%;
-}
-
-.form-textarea:focus {
-  border-color: #2196f3;
-  outline: none;
-}
-
-.form-textarea:not(:placeholder-shown) .form-text,
-.form-textarea:focus ~ .form-text {
-  -webkit-transform: translate(0px, -40px);
-          transform: translate(0px, -40px);
-  color: #2196f3;
-  font-size: 12px;
-}
-
 .modal-button {
   -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
@@ -445,7 +458,7 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   fill: #000000;
   width: 30px;
   height: 30px;
@@ -456,7 +469,7 @@ header a {
 }
 
 .modal-close:hover, .modal-close:focus {
-  background-color: #fff;
+  background-color: #ffffff;
   fill: #2196f3;
 }
 
